@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "data-practices-for-open-science.html#about-me",
+    "href": "data-practices-for-open-science.html#about-me",
+    "title": "Data Practices for Open Science",
+    "section": "About Me",
+    "text": "About Me\n\nAlbury C\nMSc, Marine microbial trace nutrient dynamics, Dalhousie University\nCurrently a data scientist for Infrastruture Canada\n\n\n\nThanks for joining me for this presentation.\nI’ll introduce myself and get right into the content.\nMy background is as a microbial ecologist, studying how changing environmental conditions affect marine microbes at the poles.\nI spent a lot of time working with large proetomics and metabolomic datasets for this work, and I began to have a lot of time programming in R and python.\nThat led to me beginning to deliver workshop on scientific programming for youth and other learners.\nI’m currently at data scientist for infrastrure canada, where I’m building tools to better understand how public works projects impact vulnerable communities."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#about-you",
+    "href": "data-practices-for-open-science.html#about-you",
+    "title": "Data Practices for Open Science",
+    "section": "About You",
+    "text": "About You\nVisit the slido here."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#data-perils-weve-all-dealt-with",
+    "href": "data-practices-for-open-science.html#data-perils-weve-all-dealt-with",
+    "title": "Data Practices for Open Science",
+    "section": "Data Perils We’ve All Dealt With",
+    "text": "Data Perils We’ve All Dealt With\n\n\n\n\n\n\nUh-oh!\n\n\n\nWhich version of the dataset was the final one again?\nWho was the last person to edit the pipeline?\nOpening my dataset is slowing my computer down.\nReviewer 2 wants changes. I need to repeat the entire analysis!\n\n\n\n\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#open-science",
+    "href": "data-practices-for-open-science.html#open-science",
+    "title": "Data Practices for Open Science",
+    "section": "Open Science",
+    "text": "Open Science\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#fair-principles",
+    "href": "data-practices-for-open-science.html#fair-principles",
+    "title": "Data Practices for Open Science",
+    "section": "FAIR Principles",
+    "text": "FAIR Principles\n“Importantly, it is our intent that the principles apply not only to ‘data’ in the conventional sense, but also to the algorithms, tools, and workflows that led to that data.”\n\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#coding-practices-follow-a-style-guide",
+    "href": "data-practices-for-open-science.html#coding-practices-follow-a-style-guide",
+    "title": "Data Practices for Open Science",
+    "section": "Coding Practices: Follow a style guide",
+    "text": "Coding Practices: Follow a style guide\nMaking sure your code is legible to others is one of the best ways to make sure it is reusable. The Tidyverse Style Guide is a great resource for style guidance.\n# Bad\naverage<-mean(feet/12+inches,na.rm=TRUE)\n\n# Good\naverage <- mean(feet / 12 + inches, na.rm = TRUE)"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#coding-practices-follow-a-style-guide-1",
+    "href": "data-practices-for-open-science.html#coding-practices-follow-a-style-guide-1",
+    "title": "Data Practices for Open Science",
+    "section": "Coding Practices: Follow a style guide",
+    "text": "Coding Practices: Follow a style guide\n\n\n\n\n\n\nAuto-formatting\n\n\nUse cmd + shift + A in R-studio to auto-format your code on the fly."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#coding-practices-follow-a-style-guide-2",
+    "href": "data-practices-for-open-science.html#coding-practices-follow-a-style-guide-2",
+    "title": "Data Practices for Open Science",
+    "section": "Coding Practices: Follow a style guide",
+    "text": "Coding Practices: Follow a style guide\nSectioning your code makes it easy for you and others to find the part of the analysis that you’re looking for at a glance.\n\n\n\n\n\n\nAuto-formatting\n\n\nUse cmd + shift + R in Rstudio to create a new collapsible section."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#coding-practices-use-relative-file-paths",
+    "href": "data-practices-for-open-science.html#coding-practices-use-relative-file-paths",
+    "title": "Data Practices for Open Science",
+    "section": "Coding Practices: Use relative file paths",
+    "text": "Coding Practices: Use relative file paths\n\nEver tried to run a collaborator’s script only to come up come up with cannot open file 'important-data.csv': No such file or directory? They probably didn’t set the directory for you!\nAll of our code should run on the assumption that we are working in a repository that contains of the required files.\nDon’t instruct your colleague’s computer to look for Desktop/Medical_files/hair-transplant/important-data.csv. Be kind, use a relative file path instead."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#coding-practices-use-relative-file-paths-1",
+    "href": "data-practices-for-open-science.html#coding-practices-use-relative-file-paths-1",
+    "title": "Data Practices for Open Science",
+    "section": "Coding Practices: Use relative file paths",
+    "text": "Coding Practices: Use relative file paths\nChange directories throughout the script to access different folders in the repository.\n# Relative file path to a dedicated folder with raw data files\nsetwd(\"~/Project-Repository/RAW\")\nread.csv(\"important-data.csv\")\n\n# Call on another R source file back at the root of the directory \nsetwd(\".\")\nsource(\"function-file.R\")"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#coding-practices-avoid-hard-coded-values",
+    "href": "data-practices-for-open-science.html#coding-practices-avoid-hard-coded-values",
+    "title": "Data Practices for Open Science",
+    "section": "Coding Practices: Avoid hard coded values",
+    "text": "Coding Practices: Avoid hard coded values\n\nEver seen code where the logic is impossible to follow due to manual manipulations?\nIf using constants, make sure they’re carefully commented.\nOtherwise, try to utilize variables whenever possible to improve reproducibility"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#coding-practices-avoid-hard-coded-values-1",
+    "href": "data-practices-for-open-science.html#coding-practices-avoid-hard-coded-values-1",
+    "title": "Data Practices for Open Science",
+    "section": "Coding Practices: Avoid hard coded values",
+    "text": "Coding Practices: Avoid hard coded values\n# Bad\nspec_data |> \n  mutate(scatter_normalized = scatter / 2.8)\n  \n# Better \nspec_data |> \n  # Normalize by dividing by constant from calibration\n  mutate(scatter_normalized = scatter / 2.8)\n  \n# Best\n# Load analysis that generates constant\nsource(\"spec_calibration.R\")\n\nspec_data |> \n  # Normalize by dividing by constant from calibration\n  mutate(scatter_normalized = scatter / calibration_value)"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#documentation-redundancy-in-data-is-good",
+    "href": "data-practices-for-open-science.html#documentation-redundancy-in-data-is-good",
+    "title": "Data Practices for Open Science",
+    "section": "Documentation: Redundancy in data is good",
+    "text": "Documentation: Redundancy in data is good\n\nUtilize metadata and data dictionaries to link provide important context to your primary data set.\nBefore beginning a project, think about the different ways that data should be stored.\nEx: A data frame of field sites and their unique id’s can be matched to data frames of observations from each site."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#documentation-redundancy-in-data-is-good-1",
+    "href": "data-practices-for-open-science.html#documentation-redundancy-in-data-is-good-1",
+    "title": "Data Practices for Open Science",
+    "section": "Documentation: Redundancy in data is good",
+    "text": "Documentation: Redundancy in data is good\nThis table contains two types of observations: song information and Billboard ranking (Wickam 2014)"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#documentation-redundancy-in-data-is-good-2",
+    "href": "data-practices-for-open-science.html#documentation-redundancy-in-data-is-good-2",
+    "title": "Data Practices for Open Science",
+    "section": "Documentation: Redundancy in data is good",
+    "text": "Documentation: Redundancy in data is good\nInstead, they should be saved as (1) a table with song’s artists, names and run times (2) a table stating their Billboard ranking (Wickam 2014)."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#documentation-use-version-control",
+    "href": "data-practices-for-open-science.html#documentation-use-version-control",
+    "title": "Data Practices for Open Science",
+    "section": "Documentation: Use version control",
+    "text": "Documentation: Use version control\n\nGit is a popular SCM (source code manager). It can be used through your terminal, browser (ex: Github), or desktop software (ex: GitKraken or your chosen IDE).\nVersion control allows for collaborative coding, and helps you to avoid circustances that birth monstrosities like analysis_draft_3_final.R."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#documentation-anticipate-package-conflicts",
+    "href": "data-practices-for-open-science.html#documentation-anticipate-package-conflicts",
+    "title": "Data Practices for Open Science",
+    "section": "Documentation: Anticipate package conflicts",
+    "text": "Documentation: Anticipate package conflicts\n\nIt’s important to at least note the version of critical packages you used in your analysis. This helps with troubleshooting down the line\nFor advanced models, some use conda to manage environments and package versions."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#documentation-anticipate-package-conflicts-1",
+    "href": "data-practices-for-open-science.html#documentation-anticipate-package-conflicts-1",
+    "title": "Data Practices for Open Science",
+    "section": "Documentation: Anticipate package conflicts",
+    "text": "Documentation: Anticipate package conflicts\n\n\n\n\n\n\nConflicted?\n\n\nMany of us have had the experience of loading a package that contains a function with the same name as one our code relies on.\nUse the conflicted package to choose which to use.\n\n\n\n# Load conflicted package\nlibrary(conflicted)\n\n# Set preference to use only the dplyr filter function \nconflicts_prefer(dplyr::filter())"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#documentation-master-the-art-of-the-readme",
+    "href": "data-practices-for-open-science.html#documentation-master-the-art-of-the-readme",
+    "title": "Data Practices for Open Science",
+    "section": "Documentation: Master the art of the README",
+    "text": "Documentation: Master the art of the README\n\nA README acts at the title page of your repository, letting folks who are knew the who, what, where, and why of the analysis.\nUse the README to document anything that might be important if someone brand new was to try to pick up where you’ve left off."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#storing-your-data-use-tidy-data-format",
+    "href": "data-practices-for-open-science.html#storing-your-data-use-tidy-data-format",
+    "title": "Data Practices for Open Science",
+    "section": "Storing Your Data: Use tidy data format",
+    "text": "Storing Your Data: Use tidy data format\n\nIllustration from Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#storing-your-data-keep-raw-data-raw",
+    "href": "data-practices-for-open-science.html#storing-your-data-keep-raw-data-raw",
+    "title": "Data Practices for Open Science",
+    "section": "Storing Your Data: Keep raw data raw",
+    "text": "Storing Your Data: Keep raw data raw\n\nIn repositories, create a folder named RAW. Place collected data here.\nDo not open these files except to add or remove raw data. Consider setting them to read only when viewing in excel.\nRather, keep all analysis to your scripts, which will read the data and create outputs from it.\nUse a descriptive file name for any outputs generated from raw data."
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#storing-your-data-manage-your-memory",
+    "href": "data-practices-for-open-science.html#storing-your-data-manage-your-memory",
+    "title": "Data Practices for Open Science",
+    "section": "Storing Your Data: Manage your memory",
+    "text": "Storing Your Data: Manage your memory\n\nKeep data types in mind\nConsider parquet for massive files\nUse arrow to work with larger than memory data sets"
+  },
+  {
+    "objectID": "data-practices-for-open-science.html#references",
+    "href": "data-practices-for-open-science.html#references",
+    "title": "Data Practices for Open Science",
+    "section": "References",
+    "text": "References\nWickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10\n\n\nData Practices for Open Science"
+  }
+]
