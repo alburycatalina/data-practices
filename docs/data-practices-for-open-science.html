@@ -393,39 +393,6 @@
 </div>
 
 </section>
-<section id="about-me" class="slide level2">
-<h2>About Me</h2>
-<ul>
-<li class="fragment"><strong><a href="alburycatalina.github.io">Albury C</a></strong></li>
-<li class="fragment">MSc, Marine microbial trace nutrient dynamics, Dalhousie University</li>
-<li class="fragment">Currently a data scientist for Infrastruture Canada</li>
-</ul>
-<aside class="notes">
-<ul>
-<li>Thanks for joining me for this presentation.</li>
-<li>I’ll introduce myself and get right into the content.</li>
-<li>My background is as a microbial ecologist, studying how changing environmental conditions affect marine microbes at the poles.</li>
-<li>I spent a lot of time working with large proetomics and metabolomic datasets for this work, and I began to have a lot of time programming in R and python.</li>
-<li>That led to me beginning to deliver workshop on scientific programming for youth and other learners.</li>
-<li>I’m currently at data scientist for infrastrure canada, where I’m building tools to better understand how public works projects impact vulnerable communities.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="about-you" class="slide level2">
-<h2>About You</h2>
-<p><a href="https://app.sli.do/event/ucFSJedMieYDnXiKN8tA7z">Visit the slido here.</a></p>
-
-<img data-src="images/qr_datapractices.png" class="r-stretch"></section>
 <section id="data-perils-weve-all-dealt-with" class="slide level2">
 <h2>Data Perils We’ve All Dealt With</h2>
 <div class="callout callout-important callout-captioned callout-style-default">
@@ -447,7 +414,58 @@
 </div>
 </div>
 <aside class="notes">
-<p>Speaker notes go here.</p>
+<p>Many of us have run into these common data perils. These happen because, unlike computers humans have imperfect memories. Keeping perfect track of complex processes like our research can sometimes escape us. That’s why it’s important to set up systems that support us in not ending up in these situations.</p>
+<p>That’s what we’ll talk about today - open science and the FAIR principles, which encourage us to make our research accessible to others and practical ways to implement these approaches in our research workflows.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="about-me" class="slide level2">
+<h2>About Me</h2>
+<ul>
+<li class="fragment"><strong><a href="alburycatalina.github.io">Albury C</a></strong></li>
+<li class="fragment">MSc, Marine microbial trace nutrient dynamics, Dalhousie University</li>
+<li class="fragment">Currently a data scientist for Infrastruture Canada</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Thanks for joining me for this presentation.</li>
+<li>I wanted to start by introducing myself before we get into the content.</li>
+<li>My background is as a microbial ecologist, studying how changing environmental conditions affect marine microbes at the poles.</li>
+<li>I spent a lot of time working with large proetomics and metabolomic datasets for this work, and I began to have a lot of time programming in R and python.</li>
+<li>That led to me beginning to deliver workshop on scientific programming for youth and other learners.</li>
+<li>I’m currently at data scientist for infrastrure canada, where I’m building tools to better understand how public works projects impact vulnerable communities.</li>
+<li>Excited about open source and data!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="about-you" class="slide level2">
+<h2>About You</h2>
+<p><a href="https://app.sli.do/event/ucFSJedMieYDnXiKN8tA7z">Visit the slido here.</a></p>
+
+<img data-src="images/qr_datapractices.png" class="r-stretch"><aside class="notes">
+<ul>
+<li><p>I want to learn a few things about the group before we get started.</p></li>
+<li><p>The best practices that we’ll cover in this presentation will be presented for R, but apply to other open source languages like Python and Julia.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -464,7 +482,10 @@
 <section id="if-i-have-seen-further-it-is-by-standing-on-the-shoulders-of-giants.---sir-isaac-newton" class="title-slide slide level1 center">
 <h1><em>“If I have seen further, it is by standing on the shoulders of giants.”</em> - Sir Isaac Newton</h1>
 <aside class="notes">
-<p>Science has always been a team effort. How can we make sure our contributions can be utilized by others to keep advancing our areas of study?</p>
+<ul>
+<li>Science has always been a team effort.</li>
+<li>How can we make sure our contributions can be utilized by others to keep advancing our areas of study?</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -479,8 +500,12 @@
 </section>
 <section id="open-science" class="slide level2">
 <h2>Open Science</h2>
+<ul>
+<li class="fragment">Aims to make research accessible for the benefits of both scientists and broader society (UNESCO 2023)</li>
+<li class="fragment">Increases transparency and the speed of knowledge transfer</li>
+</ul>
 <aside class="notes">
-<p>Speaker notes go here.</p>
+<p>Increases collaboration and opens processes of scientific knowledge creation.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -498,7 +523,7 @@
 <p><em>“Importantly, it is our intent that the principles apply not only to ‘data’ in the conventional sense, but also to the algorithms, tools, and workflows that led to that data.”</em></p>
 
 <img data-src="images/FAIR_article.png" class="r-stretch"><aside class="notes">
-<p>Speaker notes go here.</p>
+<p>The FAIR principles were released in 2016 in Scientific Data. Guidance for improving the infrastructure that supports the reuse of scientific data. Focus on machine-actionability (humans need help doing this because of growing scale and complexity of data)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -511,6 +536,26 @@
           display:block!important;
       }</style></aside>
 </section></section>
+<section id="fair-principles-1" class="title-slide slide level1 center">
+<h1>FAIR Principles</h1>
+<ul>
+<li class="fragment">Findable</li>
+<li class="fragment">Accessible</li>
+<li class="fragment">Interoperable</li>
+<li class="fragment">Reusable</li>
+</ul>
+<p>We will talk about best pratices for setting up your research workflow in a way that improves these aspects for your data.</p>
+</section>
+
+<section id="best-data-practices" class="title-slide slide level1 center">
+<h1>Best Data Practices</h1>
+<ul>
+<li class="fragment">Coding Practices</li>
+<li class="fragment">Storing Your Data</li>
+<li class="fragment">Documentation</li>
+</ul>
+</section>
+
 <section>
 <section id="coding-practices" class="title-slide slide level1 center">
 <h1>Coding Practices</h1>
@@ -609,13 +654,61 @@
 <span id="cb3-16"><a href="#cb3-16"></a>  <span class="fu">mutate</span>(<span class="at">scatter_normalized =</span> scatter <span class="sc">/</span> calibration_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
+<section id="storing-your-data" class="title-slide slide level1 center">
+<h1>Storing Your Data</h1>
+<ul>
+<li class="fragment">Use tidy data format</li>
+<li class="fragment">Keep raw data raw</li>
+<li class="fragment">Manage your memory</li>
+</ul>
+</section>
+<section id="storing-your-data-use-tidy-data-format" class="slide level2">
+<h2>Storing Your Data: Use tidy data format</h2>
+
+<img data-src="images/tidy_data_horst.jpg" class="r-stretch quarto-figure-center"><p class="caption">Illustration from <em>Tidy Data for reproducibility, efficiency, and collaboration</em> by Julia Lowndes and Allison Horst</p></section>
+<section id="storing-your-data-keep-raw-data-raw" class="slide level2">
+<h2>Storing Your Data: Keep raw data raw</h2>
+<ul>
+<li class="fragment">In repositories, create a folder named RAW. Place collected data here.</li>
+<li class="fragment"><em>Do not open these files except to add or remove raw data. Consider setting them to read only when viewing in excel.</em></li>
+<li class="fragment">Rather, keep all analysis to your scripts, which will read the data and create outputs from it.</li>
+<li class="fragment">Use a descriptive file name for any outputs generated from raw data.</li>
+</ul>
+</section>
+<section id="storing-your-data-manage-your-memory" class="slide level2">
+<h2>Storing Your Data: Manage your memory</h2>
+<ul>
+<li class="fragment">Keep data types in mind</li>
+<li class="fragment">Consider parquet for large files</li>
+<li class="fragment">Use the <a href="https://arrow.apache.org/docs/r/"><code>arrow</code> package</a> to work with larger than memory data sets</li>
+</ul>
+</section></section>
+<section>
 <section id="documentation" class="title-slide slide level1 center">
 <h1>Documentation</h1>
 <ul>
-<li class="fragment">Redundancy in data is good</li>
 <li class="fragment">Use version control</li>
-<li class="fragment">Anticipate package conflicts</li>
 <li class="fragment">Master the art of the README</li>
+<li class="fragment">Redundancy in data is good</li>
+<li class="fragment">Anticipate package conflicts</li>
+</ul>
+</section>
+<section id="documentation-use-version-control" class="slide level2">
+<h2>Documentation: Use version control</h2>
+<ul>
+<li class="fragment">Git is a popular SCM (source code manager). It can be used through your terminal, browser (<a href="https://github.com/">ex: Github</a>), or desktop software (ex: <a href="https://www.gitkraken.com/">GitKraken</a> or your chosen IDE).</li>
+<li class="fragment">Version control allows for collaborative coding, and helps you to avoid circustances that birth monstrosities like <code>analysis_draft_3_final.R</code>.</li>
+</ul>
+</section>
+<section id="documentation-use-version-control-1" class="slide level2">
+<h2>Documentation: Use version control</h2>
+
+<img data-src="images/git.png" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Allison Horst</p></section>
+<section id="documentation-master-the-art-of-the-readme" class="slide level2">
+<h2>Documentation: Master the art of the README</h2>
+<ul>
+<li class="fragment">A README acts at the title page of your repository, letting folks who are knew the who, what, where, and why of the analysis.</li>
+<li class="fragment">Use the README to document anything that might be important if someone brand new was to try to pick up where you’ve left off.</li>
 </ul>
 </section>
 <section id="documentation-redundancy-in-data-is-good" class="slide level2">
@@ -636,13 +729,6 @@
 <p>Instead, they should be saved as (1) a table with song’s artists, names and run times (2) a table stating their Billboard ranking (Wickam 2014).</p>
 
 <img data-src="images/Redundancy_twotables.png" class="r-stretch"></section>
-<section id="documentation-use-version-control" class="slide level2">
-<h2>Documentation: Use version control</h2>
-<ul>
-<li class="fragment">Git is a popular SCM (source code manager). It can be used through your terminal, browser (<a href="https://github.com/">ex: Github</a>), or desktop software (ex: <a href="https://www.gitkraken.com/">GitKraken</a> or your chosen IDE).</li>
-<li class="fragment">Version control allows for collaborative coding, and helps you to avoid circustances that birth monstrosities like <code>analysis_draft_3_final.R</code>.</li>
-</ul>
-</section>
 <section id="documentation-anticipate-package-conflicts" class="slide level2">
 <h2>Documentation: Anticipate package conflicts</h2>
 <ul>
@@ -672,46 +758,13 @@
 <span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Set preference to use only the dplyr filter function </span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="fu">conflicts_prefer</span>(dplyr<span class="sc">::</span><span class="fu">filter</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="documentation-master-the-art-of-the-readme" class="slide level2">
-<h2>Documentation: Master the art of the README</h2>
-<ul>
-<li class="fragment">A README acts at the title page of your repository, letting folks who are knew the who, what, where, and why of the analysis.</li>
-<li class="fragment">Use the README to document anything that might be important if someone brand new was to try to pick up where you’ve left off.</li>
-</ul>
-</section></section>
-<section>
-<section id="storing-your-data" class="title-slide slide level1 center">
-<h1>Storing Your Data</h1>
-<ul>
-<li class="fragment">Use tidy data format</li>
-<li class="fragment">Keep raw data raw</li>
-<li class="fragment">Manage your memory</li>
-</ul>
-</section>
-<section id="storing-your-data-use-tidy-data-format" class="slide level2">
-<h2>Storing Your Data: Use tidy data format</h2>
-
-<img data-src="images/tidy_data_horst.jpg" class="r-stretch quarto-figure-center"><p class="caption">Illustration from <em>Tidy Data for reproducibility, efficiency, and collaboration</em> by Julia Lowndes and Allison Horst</p></section>
-<section id="storing-your-data-keep-raw-data-raw" class="slide level2">
-<h2>Storing Your Data: Keep raw data raw</h2>
-<ul>
-<li class="fragment">In repositories, create a folder named RAW. Place collected data here.</li>
-<li class="fragment"><em>Do not open these files except to add or remove raw data. Consider setting them to read only when viewing in excel.</em></li>
-<li class="fragment">Rather, keep all analysis to your scripts, which will read the data and create outputs from it.</li>
-<li class="fragment">Use a descriptive file name for any outputs generated from raw data.</li>
-</ul>
-</section>
-<section id="storing-your-data-manage-your-memory" class="slide level2">
-<h2>Storing Your Data: Manage your memory</h2>
-<ul>
-<li class="fragment">Keep data types in mind</li>
-<li class="fragment">Consider parquet for massive files</li>
-<li class="fragment">Use arrow to work with larger than memory data sets</li>
-</ul>
-</section>
 <section id="references" class="slide level2">
 <h2>References</h2>
-<p>Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10</p>
+<ul>
+<li class="fragment">Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10</li>
+<li class="fragment">Wilkinson, M., Dumontier, M., Aalbersberg, I. et al.&nbsp;The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18</li>
+<li class="fragment"><a href="https://www.unesco.org/en/open-science/about?hub=686">UNESCO Recommendation on Open Science</a>. 2023</li>
+</ul>
 
 <div class="footer footer-default">
 <p>Data Practices for Open Science</p>
