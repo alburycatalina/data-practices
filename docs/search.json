@@ -4,7 +4,7 @@
     "href": "data-practices-for-open-science.html#data-perils-weve-all-dealt-with",
     "title": "Data Practices for Open Science",
     "section": "Data Perils We’ve All Dealt With",
-    "text": "Data Perils We’ve All Dealt With\n\n\n\n\n\n\nUh-oh!\n\n\n\nWhich version of the dataset was the final one again?\nWho was the last person to edit the pipeline?\nOpening my dataset is slowing my computer down.\nReviewer 2 wants changes. I need to repeat the entire analysis!\n\n\n\n\n\nMany of us have run into these common data perils. These happen because, unlike computers humans have imperfect memories. Keeping perfect track of complex processes like our research can sometimes escape us. That’s why it’s important to set up systems that support us in not ending up in these situations.\nThat’s what we’ll talk about today - open science and the FAIR principles, which encourage us to make our research accessible to others and practical ways to implement these approaches in our research workflows."
+    "text": "Data Perils We’ve All Dealt With\n\n\n\n\n\n\nUh-oh!\n\n\n\nWhich version of the dataset was the final one again?\nWho was the last person to edit the pipeline?\nOpening my dataset is slowing my computer down.\nReviewer 2 wants changes. I need to repeat the entire analysis!\n\n\n\n\n\nMany of us have run into these common data perils. These happen because, unlike computers humans have imperfect memories. Keeping perfect track of complex processes like our research can sometimes escape us. That’s why it’s important to set up systems that support us in not ending up in these situations.\nThat’s what we’ll talk about today - open science and the FAIR principles, which encourage us to make our research accessible to others and practical ways to implement these approaches in our research workflows.\nTest"
   },
   {
     "objectID": "data-practices-for-open-science.html#about-me",
@@ -102,7 +102,7 @@
     "href": "data-practices-for-open-science.html#storing-your-data-redundancy-in-data-is-good-3",
     "title": "Data Practices for Open Science",
     "section": "Storing Your Data: Redundancy in data is good",
-    "text": "Storing Your Data: Redundancy in data is good\n\nReduces each table to only one type of observation, avoiding confusion\nSaves space\n\n\n\nAvoids confusion. In the first table there are two kinds of temporal data. It could be easy to conflate time and date.\nThe date is actually the date that the song first entered the billboard top 100. The time is the song length.\nSaves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (one with 100 entries and 4 variables and the other with 7 x 3 = 21) = 421."
+    "text": "Storing Your Data: Redundancy in data is good\n\nReduces each table to only one type of observation, avoiding confusion\nSaves space\n\n\n\nAvoids confusion. In the first table there are two kinds of temporal data. It could be easy to conflate time and date.\nThe date is actually the date that the song first entered the billboard top 100. The time is the song length.\nSaves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (one with 100 entries and 4 variables and the other with 7 x 100 x 3 = 2100) = 4500."
   },
   {
     "objectID": "data-practices-for-open-science.html#storing-your-data-keep-raw-data-raw",
