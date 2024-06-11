@@ -1,0 +1,467 @@
+---
+title: "Data Practices for Open Science"
+format: 
+  revealjs:
+    code-copy: true
+    code-overflow: wrap
+    theme: simple
+    incremental: true 
+    footer: "Data Practices for Open Science"
+editor: visual
+---
+
+## Data Perils We've All Dealt With
+
+::: callout-important
+## Uh-oh!
+
+-   Which version of the dataset was the final one again?
+-   Who was the last person to edit the pipeline?
+-   Opening my dataset is slowing my computer down.
+-   Reviewer 2 wants changes. I need to repeat the entire analysis!
+:::
+
+::: notes
+Many of us have run into these common data perils. These happen because, unlike computers humans have imperfect memories. Keeping perfect track of complex processes like our research can sometimes escape us. That's why it's important to set up systems that support us in not ending up in these situations.
+
+That's what we'll talk about today - open science and the FAIR principles, which encourage us to make our research accessible to others and practical ways to implement these approaches in our research workflows.
+:::
+
+## About Me
+
+:::: {layout="[ 60, 40 ]"}
+
+::: {#first-column}
+-   [**Albury C**](alburycatalina.github.io)
+-   MSc, Marine microbial trace nutrient dynamics, Dalhousie University
+- Currently a data scientist for Infrastruture Canada
+:::
+
+::: {#second-column}
+![](images/albury.jpeg)
+:::
+
+::::
+
+
+
+
+::: notes
+-   Thanks for joining me for this presentation.
+-   I wanted to start by introducing myself before we get into the content.
+-   My background is as a microbial ecologist, studying how changing environmental conditions affect marine microbes at the poles.
+-   I spent a lot of time working with large proetomics and metabolomic datasets for this work, and I began to have a lot of time programming in R and python.
+-   That led to me beginning to deliver workshop on scientific programming for youth and other learners.
+-   I'm currently at data scientist for infrastrure canada, where I'm building tools to better understand how public works projects impact vulnerable communities.
+-   Excited about open source and data!
+:::
+
+## About You
+
+[Visit the slido here.](https://app.sli.do/event/ucFSJedMieYDnXiKN8tA7z)
+
+![](images/qr_datapractices.png)
+
+::: notes
+-   I want to learn a few things about the group before we get started.
+
+-   The best practices that we'll cover in this presentation will be presented for R, but apply to other open source languages like Python and Julia.
+:::
+
+# *“If I have seen further, it is by standing on the shoulders of giants.”* - Sir Isaac Newton
+
+::: notes
+- Begin with a quote: Sir Isaac Newton said this
+- Speaking to how his scientific advancements were only possible due to the result of previous work by others.
+-   Likewise, how can we make sure our contributions can be utilized by others to keep advancing our areas of study?
+- One way is by prioritizing what some call open approaches to science
+:::
+
+## Open Science
+
+-   Aims to make research accessible for the benefits of both scientists and broader society (UNESCO 2023)
+-   Increases transparency and the speed of knowledge transfer
+
+::: notes
+- A set of principles and practices that aim to make scientific research from all fields accessible to everyone for the benefits of scientists and society as a whole
+- Increases collaboration and opens processes of scientific knowledge creation.
+- Examples of closed science: paywalled journals, supporting data being unavailable or high cost, favoring knowledge produced by high income countries, and hidden or unknown source code or workflow, which is where I'd like to direct attention for talk 
+:::
+
+
+
+# FAIR Principles
+
+-   Findable
+-   Accessible
+-   Interoperable
+-   Reusable
+
+::: notes
+- One framework for increasing openess in workflows is the FAIR principles
+- The FAIR principles were released in 2016 in Scientific Data. Guidance for improving the infrastructure that supports the reuse of scientific data. 
+- Findable: making sure your data makes it into a repository where others can also discover it
+- Accessible: people can use it (documentation, what does each column mean. open source)
+- Interoperable: Data should be readable by machines
+- Reusable: Ensure there are many labels attached to the data. Define if raw or processed, specificy perculiarities
+- We will talk about best pratices for setting up your research workflow in a way that improves these aspects for your data.
+:::
+
+## FAIR Principles
+- *"Importantly, it is our intent that the principles apply not only to ‘data’ in the conventional sense, but also to the **algorithms, tools, and workflows** that led to that data." (Wilkinson et al. 2016)*
+- Focus on machine actionability 
+
+![](images/FAIR_article.png)
+
+::: notes
+- Applies to not just the data itself but also scripts, tools, and workflows
+- Focus on machine-actionability. Humans need help from machines because of growing scale and complexity of data
+:::
+
+# Best Data Practices
+
+-   Documentation
+-   Storing Your Data
+-   Coding Practices
+
+::: notes
+- We'll be talking about these in the context of using an open source language like R or Python for working with your data. 
+- Open source is one step in making sure data analysis pipeline is FAIR. 
+- Non-proprietary and free!
+
+:::
+# Documentation
+
+-   Use version control
+-   Master the art of the README
+-   Anticipate package conflicts
+
+::: notes
+- We'll start with documentation because it's often one of the first aspects you should to consider when starting a project. 
+- We'll talk about using version control for keeping track of your project, which includes creating a README document to act as title page, and talk about how to make sure the packages you use in your analysis continue to be able to work. 
+:::
+
+## Documentation: Use version control
+
+-   Git is a popular SCM (source code manager). It can be used through your terminal, browser ([ex: Github](https://github.com/)), or desktop software (ex: [GitKraken](https://www.gitkraken.com/) or your chosen IDE).
+-   Version control helps you to avoid circumstances that birth monstrosities like `analysis_draft_3_final.R`.
+- [An example of a Github repository](https://github.com/alburycatalina/example-repo)
+
+::: notes
+- Git is a SCM (stands for source code manager)
+- Version control allows for multiple people to contribute to code and also helps you keep track of your project. 
+- Ever seen a file name like this? Piling on information into file name. Git takes care of this.
+:::
+## Documentation: Use version control
+
+![Illustration by Allison Horst](images/git.png)
+
+:::notes
+- Git asks you to create "save points" every time you make a change. Allows you to easily return to previous versions and know what has changed over time. 
+- If you're using excel for analysis, you may notice that it's difficult to keep track of exactly what has happened. 
+- With an OS language like R/Python plus git, you're unstoppable!
+:::
+
+## Documentation: Master the art of the README
+
+-   A README acts at the title page of your repository, letting folks who are knew the who, what, where, and why of the analysis.
+-   Use the README to document anything that might be important if someone brand new was to try to pick up where you've left off.
+
+::: notes
+- README is landing page. Use it to act as the instruction manual for the code
+- Comes in very handy when writing methods section of papers
+:::
+
+## Documentation: Anticipate package conflicts
+
+-   Note the version of critical packages you used in your analysis. This helps with troubleshooting down the line.
+-   For advanced models, some use [conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) to manage environments and package versions.
+
+::: notes
+- Most of us use packages to add functionality to OS languages
+- Can get complicated when versions change over time
+- Bare minimum is to note the version of critical packages
+- Conda to manage environments
+:::
+
+## Documentation: Anticipate package conflicts
+
+::: callout-tip
+## Conflicted?
+
+Many of us have had the experience of loading a package that contains a function with the same name as one our code relies on.
+
+Use the [`conflicted`](https://conflicted.r-lib.org/) package to choose which to use.
+:::
+
+::: notes
+- There may also be conflicts between packages depending on who uses the repo
+- This aside is half about documentation and half coding practice. Documentation because here you're telling the use which function from which package you mention to use
+- There are many packages with functions named the same thing
+- Avoid ambiguity by specifying 
+:::
+``` r
+# Load conflicted package
+library(conflicted)
+
+# Set preference to use only the dplyr filter function 
+conflicts_prefer(dplyr::filter())
+```
+
+
+# Storing Your Data
+
+-   Use tidy data format
+- Redundancy in data is good
+-   Keep raw data raw
+-   Manage your memory
+
+::: notes
+Next, some thought to how you keep your data is important. 
+:::
+## Storing Your Data: Use tidy data format
+
+![Illustration from *Tidy Data for reproducibility, efficiency, and collaboration* by Julia Lowndes and Allison Horst](images/tidy_data_horst.jpg)
+
+::: notes
+- In 2014, Hadley Wickam proposed tidy data in a paper in Journal Statistical Software, where every obs is a row and every variable is a column. 
+- Great for standardization and machine readability
+:::
+
+## Storing Your Data: Redundancy in data is good
+
+-   Utilize metadata and data dictionaries to link provide important context to your primary data set.
+-   Before beginning a project, think about the different ways that data should be stored.
+-   Ex: In a field study, observations from each study site should be kept separate from information about each study site. The two can be linked by unique site identifiers. 
+
+::: notes
+- Through our scientific career, we're often told to be concise and simplify so this advice may surprise you. 
+- Redundancy in data is good because it allows you to link between different pieces of information and also saves space. 
+- Also plays into tidy data. 
+:::
+
+## Storing Your Data:  Redundancy in data is good
+- This table contains two types of observations: song information and Billboard ranking (Wickam 2014)
+- One entry each week the song remains on the Billboard top 100
+
+![](images/Redundancy_multipledata_types.png)
+
+## Storing Your Data: Redundancy in data is good
+
+Instead, they should be saved as:
+
+1. a table with song's artists, names and run times
+2. a table with details on their Billboard ranking (Wickam 2014).
+
+![](images/Redundancy_twotables.png)
+
+::: notes
+
+Joined by unique identifiers
+:::
+
+## Storing Your Data: Redundancy in data is good
+
+- Reduces each table to only one type of observation, avoiding confusion
+- Saves space
+
+::: notes 
+- Avoids confusion. In the first table there are two kinds of temporal data. It could be easy to conflate time and date. 
+
+- The date is actually the date that the song first entered the billboard top 100. The time is the song length. 
+- Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (one with 100 entries and 4 variables and the other with 7 x 3 = 21) = 421. 
+::: 
+
+![](images/Redundancy_twotables.png)
+
+## Storing Your Data: Keep raw data raw
+
+-   In repositories, create a folder named RAW. Place collected data here.
+-   *Do not open these files except to add or remove raw data. Consider setting them to read only when viewing in excel.*
+-   Keep all analysis to your scripts, which will read the data and create outputs from it.
+
+::: notes
+
+-   Use a descriptive file name for any outputs generated from raw data.
+:::
+
+## Storing Your Data: Manage your memory
+
+-   Keep data types in mind
+-   Consider parquet for large files
+-   Use the [`arrow` package](https://arrow.apache.org/docs/r/) to work with larger than memory data sets
+
+## Storing Your Data: Manage your memory
+
+```r
+# Load in large dataset with arrow
+library(arrow)
+
+massive_dataset <- read.csv("massive_dataset.csv") |> 
+  as_arrow_table()
+
+```
+
+
+# Coding Practices
+
+-   Follow a style guide
+-   Use relative file paths
+-   Avoid hard coded values
+
+::: notes
+- After properly establishing documentation, creating a repo for your project, and deciding where and how your data will be stored, you're ready to start coding. 
+- Some things that will help with the FAIRness of your analysis will be to:
+
+:::
+
+
+## Coding Practices: Follow a style guide
+
+The [Tidyverse Style Guide](https://style.tidyverse.org/) is a great resource for style guidance.
+
+``` {.r code-line-numbers="1-2|4-5"}
+# Bad
+average<-mean(feet/12+inches,na.rm=TRUE)
+
+# Good
+average <- mean(feet / 12 + inches, na.rm = TRUE)
+```
+
+::: notes
+- Making sure your code is legible to others is one of the best ways to make sure it is reusable
+- A lot like grammar and style make a language like english easier to read, following style guide helps similarly for code
+- Standardized style means others know what to expect
+- Relevant for nearly all languages
+:::
+
+
+## Coding Practices: Follow a style guide
+
+::: callout-tip
+## Auto-formatting
+
+Use `cmd + shift + A` in R-studio to auto-format your code on the fly.
+:::
+
+::: notes
+Handy tip: can highlight and cmd shift A to auto format
+
+:::
+
+## Coding Practices: More on Style
+
+Sectioning your code makes it easy for you and others to find the part of the analysis that you're looking for at a glance.
+
+::: callout-tip
+## Auto-formatting
+
+Use `cmd + shift + R` in Rstudio to create a new collapsible section.
+:::
+
+``` {.r}
+# separate chunks of code with sections
+
+# new section -------------------------------------------------------------
+
+
+```
+
+## Coding Practices: Use relative file paths
+
+-   Ever tried to run a collaborator's script only to come up come up with `cannot open file 'important-data.csv': No such file or directory`? They probably didn't set the directory for you!
+-   Don't instruct your colleague's computer to look for `Desktop/Medical_files/hair-transplant/important-data.csv`. Be kind, use a relative file path instead.
+
+::: notes
+-   All of our code should run on the assumption that we are working in a repository that contains of the required files.
+:::
+
+## Coding Practices: Use relative file paths
+Relative paths specify locations starting from the current location.
+
+``` {.r code-line-numbers="1-2|4-5"}
+# Bad 
+list.files("/Users/calbury/Desktop")
+
+# Better
+list.files("Desktop")
+```
+## Coding Practices: Use relative file paths
+
+- Change directories throughout the script to access different folders in the repository.
+
+``` {.r code-line-numbers="1-3|5-7|9-11"}
+# Relative file path to a dedicated folder with raw data files
+setwd("~/example-repo/RAW")
+read.csv("important-data.csv")
+
+# Call on another R source file back at the root of the directory 
+setwd(".")
+source("analysis.R")
+
+# Save the results of the analysis in it's own folder
+setwd("/Cleaned_data")
+write.csv(data_output, "data_output.csv")
+```
+
+
+## Coding Practices: Avoid hard coded values
+
+-   Ever seen code where the logic is impossible to follow due to manual manipulations?
+-   If using constants, make sure they're carefully commented.
+-   Otherwise, try to utilize variables whenever possible to improve reproducibility
+
+## Coding Practices: Avoid hard coded values
+
+``` {.r code-line-numbers="1-3|5-8|10-16"}
+# Bad
+spec_data |> 
+  mutate(scatter_normalized = scatter / 2.8)
+  
+# Better 
+spec_data |> 
+  # Normalize by dividing by constant from calibration
+  mutate(scatter_normalized = scatter / 2.8)
+  
+# Best
+# Load analysis that generates constant
+source("spec_calibration.R")
+
+spec_data |> 
+  # Normalize by dividing by constant from calibration
+  mutate(scatter_normalized = scatter / calibration_value)
+```
+::: notes
+- How is someone else supposed to know what 2.8 is? Do they keep it as is when they run the script? 
+- Or maybe it's just the number of iced coffees the author had today. Impossible to know. 
+- Calling another script is kind of like citing your sources.
+:::
+
+## Conclusions
+
+- There are many opportunities to modify your research workflows to both:
+
+1. Save your future self some headache
+2. Make your science more useful to others
+
+- A list of resources can be found at the end of the presentation 
+
+
+# Happy Data Wrangling!
+
+
+## References
+
+-   Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10
+-   Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
+-   [UNESCO Recommendation on Open Science](https://www.unesco.org/en/open-science/about?hub=686). 2023
+
+## Resources
+- [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/)
+- [Making README's](https://www.makeareadme.com/)
+- [Tidyverse Style Guide](https://style.tidyverse.org/)
+- [Conflicted](https://conflicted.r-lib.org/)
+- [Large Data in R: Tools and Techniques](https://hbs-rcs.github.io/large_data_in_R/)
+- [Data Types in Arrow and R](https://blog.djnavarro.net/posts/2022-03-04_data-types-in-arrow-and-r/)
+- [What is the Parquet File Format? Use Cases & Benefits](https://www.upsolver.com/blog/apache-parquet-why-use)
+- [R for Reproducible Research:Navigating Files and Directories](https://ytakemon.github.io/2019-10-22-R-BCCRC/02-filedir/)

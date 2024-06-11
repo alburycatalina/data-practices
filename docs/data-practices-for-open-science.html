@@ -430,11 +430,20 @@
 </section>
 <section id="about-me" class="slide level2">
 <h2>About Me</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
 <ul>
-<li class="fragment"><strong><a href="alburycatalina.github.io">Albury C</a></strong></li>
+<li class="fragment"><a href="alburycatalina.github.io"><strong>Albury C</strong></a></li>
 <li class="fragment">MSc, Marine microbial trace nutrient dynamics, Dalhousie University</li>
 <li class="fragment">Currently a data scientist for Infrastruture Canada</li>
 </ul>
+</div>
+<div id="second-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><img data-src="images/albury.jpeg"></p>
+</div>
+</div>
+</div>
 <aside class="notes">
 <ul>
 <li>Thanks for joining me for this presentation.</li>
@@ -483,8 +492,10 @@
 <h1><em>“If I have seen further, it is by standing on the shoulders of giants.”</em> - Sir Isaac Newton</h1>
 <aside class="notes">
 <ul>
-<li>Science has always been a team effort.</li>
-<li>How can we make sure our contributions can be utilized by others to keep advancing our areas of study?</li>
+<li>Begin with a quote: Sir Isaac Newton said this</li>
+<li>Speaking to how his scientific advancements were only possible due to the result of previous work by others.</li>
+<li>Likewise, how can we make sure our contributions can be utilized by others to keep advancing our areas of study?</li>
+<li>One way is by prioritizing what some call open approaches to science</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -505,25 +516,11 @@
 <li class="fragment">Increases transparency and the speed of knowledge transfer</li>
 </ul>
 <aside class="notes">
-<p>Increases collaboration and opens processes of scientific knowledge creation.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="fair-principles" class="slide level2">
-<h2>FAIR Principles</h2>
-<p><em>“Importantly, it is our intent that the principles apply not only to ‘data’ in the conventional sense, but also to the algorithms, tools, and workflows that led to that data.”</em></p>
-
-<img data-src="images/FAIR_article.png" class="r-stretch"><aside class="notes">
-<p>The FAIR principles were released in 2016 in Scientific Data. Guidance for improving the infrastructure that supports the reuse of scientific data. Focus on machine-actionability (humans need help doing this because of growing scale and complexity of data)</p>
+<ul>
+<li>A set of principles and practices that aim to make scientific research from all fields accessible to everyone for the benefits of scientists and society as a whole</li>
+<li>Increases collaboration and opens processes of scientific knowledge creation.</li>
+<li>Examples of closed science: paywalled journals, supporting data being unavailable or high cost, favoring knowledge produced by high income countries, and hidden or unknown source code or workflow, which is where I’d like to direct attention for talk</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -536,7 +533,8 @@
           display:block!important;
       }</style></aside>
 </section></section>
-<section id="fair-principles-1" class="title-slide slide level1 center">
+<section>
+<section id="fair-principles" class="title-slide slide level1 center">
 <h1>FAIR Principles</h1>
 <ul>
 <li class="fragment">Findable</li>
@@ -544,197 +542,196 @@
 <li class="fragment">Interoperable</li>
 <li class="fragment">Reusable</li>
 </ul>
-<p>We will talk about best pratices for setting up your research workflow in a way that improves these aspects for your data.</p>
+<aside class="notes">
+<ul>
+<li>One framework for increasing openess in workflows is the FAIR principles</li>
+<li>The FAIR principles were released in 2016 in Scientific Data. Guidance for improving the infrastructure that supports the reuse of scientific data.</li>
+<li>Findable: making sure your data makes it into a repository where others can also discover it</li>
+<li>Accessible: people can use it (documentation, what does each column mean. open source)</li>
+<li>Interoperable: Data should be readable by machines</li>
+<li>Reusable: Ensure there are many labels attached to the data. Define if raw or processed, specificy perculiarities</li>
+<li>We will talk about best pratices for setting up your research workflow in a way that improves these aspects for your data.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
+<section id="fair-principles-1" class="slide level2">
+<h2>FAIR Principles</h2>
+<ul>
+<li class="fragment"><em>“Importantly, it is our intent that the principles apply not only to ‘data’ in the conventional sense, but also to the <strong>algorithms, tools, and workflows</strong> that led to that data.” (Wilkinson et al.&nbsp;2016)</em></li>
+<li class="fragment">Focus on machine actionability</li>
+</ul>
 
+<img data-src="images/FAIR_article.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>Applies to not just the data itself but also scripts, tools, and workflows</li>
+<li>Focus on machine-actionability. Humans need help from machines because of growing scale and complexity of data</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section id="best-data-practices" class="title-slide slide level1 center">
 <h1>Best Data Practices</h1>
 <ul>
-<li class="fragment">Coding Practices</li>
-<li class="fragment">Storing Your Data</li>
 <li class="fragment">Documentation</li>
+<li class="fragment">Storing Your Data</li>
+<li class="fragment">Coding Practices</li>
 </ul>
+<aside class="notes">
+<ul>
+<li>We’ll be talking about these in the context of using an open source language like R or Python for working with your data.</li>
+<li>Open source is one step in making sure data analysis pipeline is FAIR.</li>
+<li>Non-proprietary and free!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
-<section>
-<section id="coding-practices" class="title-slide slide level1 center">
-<h1>Coding Practices</h1>
-<ul>
-<li class="fragment">Follow a style guide</li>
-<li class="fragment">Use relative file paths</li>
-<li class="fragment">Avoid hard coded values</li>
-</ul>
-</section>
-<section id="coding-practices-follow-a-style-guide" class="slide level2">
-<h2>Coding Practices: Follow a style guide</h2>
-<p>Making sure your code is legible to others is one of the best ways to make sure it is reusable. The <a href="https://style.tidyverse.org/">Tidyverse Style Guide</a> is a great resource for style guidance.</p>
-<div class="sourceCode" id="cb1" data-code-line-numbers="1-2|4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Bad</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>average<span class="ot">&lt;-</span><span class="fu">mean</span>(feet<span class="sc">/</span><span class="dv">12</span><span class="sc">+</span>inches,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Good</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>average <span class="ot">&lt;-</span> <span class="fu">mean</span>(feet <span class="sc">/</span> <span class="dv">12</span> <span class="sc">+</span> inches, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="coding-practices-follow-a-style-guide-1" class="slide level2">
-<h2>Coding Practices: Follow a style guide</h2>
-<div class="callout callout-tip callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Auto-formatting</strong></p>
-</div>
-<div class="callout-content">
-<p>Use <code>cmd + shift + A</code> in R-studio to auto-format your code on the fly.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="coding-practices-follow-a-style-guide-2" class="slide level2">
-<h2>Coding Practices: Follow a style guide</h2>
-<p>Sectioning your code makes it easy for you and others to find the part of the analysis that you’re looking for at a glance.</p>
-<div class="callout callout-tip callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Auto-formatting</strong></p>
-</div>
-<div class="callout-content">
-<p>Use <code>cmd + shift + R</code> in Rstudio to create a new collapsible section.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="coding-practices-use-relative-file-paths" class="slide level2">
-<h2>Coding Practices: Use relative file paths</h2>
-<ul>
-<li class="fragment">Ever tried to run a collaborator’s script only to come up come up with <code>cannot open file 'important-data.csv': No such file or directory</code>? They probably didn’t set the directory for you!</li>
-<li class="fragment">All of our code should run on the assumption that we are working in a repository that contains of the required files.</li>
-<li class="fragment">Don’t instruct your colleague’s computer to look for <code>Desktop/Medical_files/hair-transplant/important-data.csv</code>. Be kind, use a relative file path instead.</li>
-</ul>
-</section>
-<section id="coding-practices-use-relative-file-paths-1" class="slide level2">
-<h2>Coding Practices: Use relative file paths</h2>
-<p>Change directories throughout the script to access different folders in the repository.</p>
-<div class="sourceCode" id="cb2" data-code-line-numbers="1-3|5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Relative file path to a dedicated folder with raw data files</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">setwd</span>(<span class="st">"~/Project-Repository/RAW"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">read.csv</span>(<span class="st">"important-data.csv"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># Call on another R source file back at the root of the directory </span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">setwd</span>(<span class="st">"."</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">source</span>(<span class="st">"function-file.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="coding-practices-avoid-hard-coded-values" class="slide level2">
-<h2>Coding Practices: Avoid hard coded values</h2>
-<ul>
-<li class="fragment">Ever seen code where the logic is impossible to follow due to manual manipulations?</li>
-<li class="fragment">If using constants, make sure they’re carefully commented.</li>
-<li class="fragment">Otherwise, try to utilize variables whenever possible to improve reproducibility</li>
-</ul>
-</section>
-<section id="coding-practices-avoid-hard-coded-values-1" class="slide level2">
-<h2>Coding Practices: Avoid hard coded values</h2>
-<div class="sourceCode" id="cb3" data-code-line-numbers="1-3|5-8|10-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Bad</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>spec_data <span class="sc">|&gt;</span> </span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">mutate</span>(<span class="at">scatter_normalized =</span> scatter <span class="sc">/</span> <span class="fl">2.8</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  </span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># Better </span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>spec_data <span class="sc">|&gt;</span> </span>
-<span id="cb3-7"><a href="#cb3-7"></a>  <span class="co"># Normalize by dividing by constant from calibration</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>  <span class="fu">mutate</span>(<span class="at">scatter_normalized =</span> scatter <span class="sc">/</span> <span class="fl">2.8</span>)</span>
-<span id="cb3-9"><a href="#cb3-9"></a>  </span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="co"># Best</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a><span class="co"># Load analysis that generates constant</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a><span class="fu">source</span>(<span class="st">"spec_calibration.R"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13"></a></span>
-<span id="cb3-14"><a href="#cb3-14"></a>spec_data <span class="sc">|&gt;</span> </span>
-<span id="cb3-15"><a href="#cb3-15"></a>  <span class="co"># Normalize by dividing by constant from calibration</span></span>
-<span id="cb3-16"><a href="#cb3-16"></a>  <span class="fu">mutate</span>(<span class="at">scatter_normalized =</span> scatter <span class="sc">/</span> calibration_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section></section>
-<section>
-<section id="storing-your-data" class="title-slide slide level1 center">
-<h1>Storing Your Data</h1>
-<ul>
-<li class="fragment">Use tidy data format</li>
-<li class="fragment">Keep raw data raw</li>
-<li class="fragment">Manage your memory</li>
-</ul>
-</section>
-<section id="storing-your-data-use-tidy-data-format" class="slide level2">
-<h2>Storing Your Data: Use tidy data format</h2>
-
-<img data-src="images/tidy_data_horst.jpg" class="r-stretch quarto-figure-center"><p class="caption">Illustration from <em>Tidy Data for reproducibility, efficiency, and collaboration</em> by Julia Lowndes and Allison Horst</p></section>
-<section id="storing-your-data-keep-raw-data-raw" class="slide level2">
-<h2>Storing Your Data: Keep raw data raw</h2>
-<ul>
-<li class="fragment">In repositories, create a folder named RAW. Place collected data here.</li>
-<li class="fragment"><em>Do not open these files except to add or remove raw data. Consider setting them to read only when viewing in excel.</em></li>
-<li class="fragment">Rather, keep all analysis to your scripts, which will read the data and create outputs from it.</li>
-<li class="fragment">Use a descriptive file name for any outputs generated from raw data.</li>
-</ul>
-</section>
-<section id="storing-your-data-manage-your-memory" class="slide level2">
-<h2>Storing Your Data: Manage your memory</h2>
-<ul>
-<li class="fragment">Keep data types in mind</li>
-<li class="fragment">Consider parquet for large files</li>
-<li class="fragment">Use the <a href="https://arrow.apache.org/docs/r/"><code>arrow</code> package</a> to work with larger than memory data sets</li>
-</ul>
-</section></section>
 <section>
 <section id="documentation" class="title-slide slide level1 center">
 <h1>Documentation</h1>
 <ul>
 <li class="fragment">Use version control</li>
 <li class="fragment">Master the art of the README</li>
-<li class="fragment">Redundancy in data is good</li>
 <li class="fragment">Anticipate package conflicts</li>
 </ul>
+<aside class="notes">
+<ul>
+<li>We’ll start with documentation because it’s often one of the first aspects you should to consider when starting a project.</li>
+<li>We’ll talk about using version control for keeping track of your project, which includes creating a README document to act as title page, and talk about how to make sure the packages you use in your analysis continue to be able to work.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="documentation-use-version-control" class="slide level2">
 <h2>Documentation: Use version control</h2>
 <ul>
 <li class="fragment">Git is a popular SCM (source code manager). It can be used through your terminal, browser (<a href="https://github.com/">ex: Github</a>), or desktop software (ex: <a href="https://www.gitkraken.com/">GitKraken</a> or your chosen IDE).</li>
-<li class="fragment">Version control allows for collaborative coding, and helps you to avoid circustances that birth monstrosities like <code>analysis_draft_3_final.R</code>.</li>
+<li class="fragment">Version control helps you to avoid circumstances that birth monstrosities like <code>analysis_draft_3_final.R</code>.</li>
+<li class="fragment"><a href="https://github.com/alburycatalina/example-repo">An example of a Github repository</a></li>
 </ul>
+<aside class="notes">
+<ul>
+<li>Git is a SCM (stands for source code manager)</li>
+<li>Version control allows for multiple people to contribute to code and also helps you keep track of your project.</li>
+<li>Ever seen a file name like this? Piling on information into file name. Git takes care of this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="documentation-use-version-control-1" class="slide level2">
 <h2>Documentation: Use version control</h2>
 
-<img data-src="images/git.png" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Allison Horst</p></section>
+<img data-src="images/git.png" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Allison Horst</p><aside class="notes">
+<ul>
+<li>Git asks you to create “save points” every time you make a change. Allows you to easily return to previous versions and know what has changed over time.</li>
+<li>If you’re using excel for analysis, you may notice that it’s difficult to keep track of exactly what has happened.</li>
+<li>With an OS language like R/Python plus git, you’re unstoppable!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="documentation-master-the-art-of-the-readme" class="slide level2">
 <h2>Documentation: Master the art of the README</h2>
 <ul>
 <li class="fragment">A README acts at the title page of your repository, letting folks who are knew the who, what, where, and why of the analysis.</li>
 <li class="fragment">Use the README to document anything that might be important if someone brand new was to try to pick up where you’ve left off.</li>
 </ul>
-</section>
-<section id="documentation-redundancy-in-data-is-good" class="slide level2">
-<h2>Documentation: Redundancy in data is good</h2>
+<aside class="notes">
 <ul>
-<li class="fragment">Utilize metadata and data dictionaries to link provide important context to your primary data set.</li>
-<li class="fragment">Before beginning a project, think about the different ways that data should be stored.</li>
-<li class="fragment">Ex: A data frame of field sites and their unique id’s can be matched to data frames of observations from each site.</li>
+<li>README is landing page. Use it to act as the instruction manual for the code</li>
+<li>Comes in very handy when writing methods section of papers</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="documentation-redundancy-in-data-is-good-1" class="slide level2">
-<h2>Documentation: Redundancy in data is good</h2>
-<p>This table contains two types of observations: song information and Billboard ranking (Wickam 2014)</p>
-
-<img data-src="images/Redundancy_multipledata_types.png" class="r-stretch"></section>
-<section id="documentation-redundancy-in-data-is-good-2" class="slide level2">
-<h2>Documentation: Redundancy in data is good</h2>
-<p>Instead, they should be saved as (1) a table with song’s artists, names and run times (2) a table stating their Billboard ranking (Wickam 2014).</p>
-
-<img data-src="images/Redundancy_twotables.png" class="r-stretch"></section>
 <section id="documentation-anticipate-package-conflicts" class="slide level2">
 <h2>Documentation: Anticipate package conflicts</h2>
 <ul>
-<li class="fragment">It’s important to at least note the version of critical packages you used in your analysis. This helps with troubleshooting down the line</li>
+<li class="fragment">Note the version of critical packages you used in your analysis. This helps with troubleshooting down the line.</li>
 <li class="fragment">For advanced models, some use <a href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html">conda</a> to manage environments and package versions.</li>
 </ul>
+<aside class="notes">
+<ul>
+<li>Most of us use packages to add functionality to OS languages</li>
+<li>Can get complicated when versions change over time</li>
+<li>Bare minimum is to note the version of critical packages</li>
+<li>Conda to manage environments</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="documentation-anticipate-package-conflicts-1" class="slide level2">
 <h2>Documentation: Anticipate package conflicts</h2>
@@ -752,11 +749,403 @@
 </div>
 </div>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Load conflicted package</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">library</span>(conflicted)</span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Set preference to use only the dplyr filter function </span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="fu">conflicts_prefer</span>(dplyr<span class="sc">::</span><span class="fu">filter</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<ul>
+<li>There may also be conflicts between packages depending on who uses the repo</li>
+<li>This aside is half about documentation and half coding practice. Documentation because here you’re telling the use which function from which package you mention to use</li>
+<li>There are many packages with functions named the same thing</li>
+<li>Avoid ambiguity by specifying</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Load conflicted package</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(conflicted)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Set preference to use only the dplyr filter function </span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">conflicts_prefer</span>(dplyr<span class="sc">::</span><span class="fu">filter</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section>
+<section id="storing-your-data" class="title-slide slide level1 center">
+<h1>Storing Your Data</h1>
+<ul>
+<li class="fragment">Use tidy data format</li>
+<li class="fragment">Redundancy in data is good</li>
+<li class="fragment">Keep raw data raw</li>
+<li class="fragment">Manage your memory</li>
+</ul>
+<aside class="notes">
+<p>Next, some thought to how you keep your data is important.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="storing-your-data-use-tidy-data-format" class="slide level2">
+<h2>Storing Your Data: Use tidy data format</h2>
+
+<img data-src="images/tidy_data_horst.jpg" class="r-stretch quarto-figure-center"><p class="caption">Illustration from <em>Tidy Data for reproducibility, efficiency, and collaboration</em> by Julia Lowndes and Allison Horst</p><aside class="notes">
+<ul>
+<li>In 2014, Hadley Wickam proposed tidy data in a paper in Journal Statistical Software, where every obs is a row and every variable is a column.</li>
+<li>Great for standardization and machine readability</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="storing-your-data-redundancy-in-data-is-good" class="slide level2">
+<h2>Storing Your Data: Redundancy in data is good</h2>
+<ul>
+<li class="fragment">Utilize metadata and data dictionaries to link provide important context to your primary data set.</li>
+<li class="fragment">Before beginning a project, think about the different ways that data should be stored.</li>
+<li class="fragment">Ex: In a field study, observations from each study site should be kept separate from information about each study site. The two can be linked by unique site identifiers.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Through our scientific career, we’re often told to be concise and simplify so this advice may surprise you.</li>
+<li>Redundancy in data is good because it allows you to link between different pieces of information and also saves space.</li>
+<li>Also plays into tidy data.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="storing-your-data-redundancy-in-data-is-good-1" class="slide level2">
+<h2>Storing Your Data: Redundancy in data is good</h2>
+<ul>
+<li class="fragment">This table contains two types of observations: song information and Billboard ranking (Wickam 2014)</li>
+<li class="fragment">One entry each week the song remains on the Billboard top 100</li>
+</ul>
+
+<img data-src="images/Redundancy_multipledata_types.png" class="r-stretch"></section>
+<section id="storing-your-data-redundancy-in-data-is-good-2" class="slide level2">
+<h2>Storing Your Data: Redundancy in data is good</h2>
+<p>Instead, they should be saved as:</p>
+<ol type="1">
+<li class="fragment">a table with song’s artists, names and run times</li>
+<li class="fragment">a table with details on their Billboard ranking (Wickam 2014).</li>
+</ol>
+
+<img data-src="images/Redundancy_twotables.png" class="r-stretch"><aside class="notes">
+<p>Joined by unique identifiers</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="storing-your-data-redundancy-in-data-is-good-3" class="slide level2">
+<h2>Storing Your Data: Redundancy in data is good</h2>
+<ul>
+<li class="fragment">Reduces each table to only one type of observation, avoiding confusion</li>
+<li class="fragment">Saves space</li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>Avoids confusion. In the first table there are two kinds of temporal data. It could be easy to conflate time and date.</p></li>
+<li><p>The date is actually the date that the song first entered the billboard top 100. The time is the song length.</p></li>
+<li><p>Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (one with 100 entries and 4 variables and the other with 7 x 3 = 21) = 421.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+<img data-src="images/Redundancy_twotables.png" class="r-stretch"></section>
+<section id="storing-your-data-keep-raw-data-raw" class="slide level2">
+<h2>Storing Your Data: Keep raw data raw</h2>
+<ul>
+<li class="fragment">In repositories, create a folder named RAW. Place collected data here.</li>
+<li class="fragment"><em>Do not open these files except to add or remove raw data. Consider setting them to read only when viewing in excel.</em></li>
+<li class="fragment">Keep all analysis to your scripts, which will read the data and create outputs from it.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Use a descriptive file name for any outputs generated from raw data.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="storing-your-data-manage-your-memory" class="slide level2">
+<h2>Storing Your Data: Manage your memory</h2>
+<ul>
+<li class="fragment">Keep data types in mind</li>
+<li class="fragment">Consider parquet for large files</li>
+<li class="fragment">Use the <a href="https://arrow.apache.org/docs/r/"><code>arrow</code> package</a> to work with larger than memory data sets</li>
+</ul>
+</section>
+<section id="storing-your-data-manage-your-memory-1" class="slide level2">
+<h2>Storing Your Data: Manage your memory</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Load in large dataset with arrow</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>massive_dataset <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"massive_dataset.csv"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">as_arrow_table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section>
+<section id="coding-practices" class="title-slide slide level1 center">
+<h1>Coding Practices</h1>
+<ul>
+<li class="fragment">Follow a style guide</li>
+<li class="fragment">Use relative file paths</li>
+<li class="fragment">Avoid hard coded values</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>After properly establishing documentation, creating a repo for your project, and deciding where and how your data will be stored, you’re ready to start coding.</li>
+<li>Some things that will help with the FAIRness of your analysis will be to:</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="coding-practices-follow-a-style-guide" class="slide level2">
+<h2>Coding Practices: Follow a style guide</h2>
+<p>The <a href="https://style.tidyverse.org/">Tidyverse Style Guide</a> is a great resource for style guidance.</p>
+<div class="sourceCode" id="cb3" data-code-line-numbers="1-2|4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Bad</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>average<span class="ot">&lt;-</span><span class="fu">mean</span>(feet<span class="sc">/</span><span class="dv">12</span><span class="sc">+</span>inches,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># Good</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>average <span class="ot">&lt;-</span> <span class="fu">mean</span>(feet <span class="sc">/</span> <span class="dv">12</span> <span class="sc">+</span> inches, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<ul>
+<li>Making sure your code is legible to others is one of the best ways to make sure it is reusable</li>
+<li>A lot like grammar and style make a language like english easier to read, following style guide helps similarly for code</li>
+<li>Standardized style means others know what to expect</li>
+<li>Relevant for nearly all languages</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="coding-practices-follow-a-style-guide-1" class="slide level2">
+<h2>Coding Practices: Follow a style guide</h2>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Auto-formatting</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <code>cmd + shift + A</code> in R-studio to auto-format your code on the fly.</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Handy tip: can highlight and cmd shift A to auto format</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="coding-practices-more-on-style" class="slide level2">
+<h2>Coding Practices: More on Style</h2>
+<p>Sectioning your code makes it easy for you and others to find the part of the analysis that you’re looking for at a glance.</p>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Auto-formatting</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <code>cmd + shift + R</code> in Rstudio to create a new collapsible section.</p>
+</div>
+</div>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># separate chunks of code with sections</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># new section -------------------------------------------------------------</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="coding-practices-use-relative-file-paths" class="slide level2">
+<h2>Coding Practices: Use relative file paths</h2>
+<ul>
+<li class="fragment">Ever tried to run a collaborator’s script only to come up come up with <code>cannot open file 'important-data.csv': No such file or directory</code>? They probably didn’t set the directory for you!</li>
+<li class="fragment">Don’t instruct your colleague’s computer to look for <code>Desktop/Medical_files/hair-transplant/important-data.csv</code>. Be kind, use a relative file path instead.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>All of our code should run on the assumption that we are working in a repository that contains of the required files.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="coding-practices-use-relative-file-paths-1" class="slide level2">
+<h2>Coding Practices: Use relative file paths</h2>
+<p>Relative paths specify locations starting from the current location.</p>
+<div class="sourceCode" id="cb5" data-code-line-numbers="1-2|4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Bad </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">list.files</span>(<span class="st">"/Users/calbury/Desktop"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># Better</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="fu">list.files</span>(<span class="st">"Desktop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="coding-practices-use-relative-file-paths-2" class="slide level2">
+<h2>Coding Practices: Use relative file paths</h2>
+<ul>
+<li class="fragment">Change directories throughout the script to access different folders in the repository.</li>
+</ul>
+<div class="sourceCode" id="cb6" data-code-line-numbers="1-3|5-7|9-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Relative file path to a dedicated folder with raw data files</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">setwd</span>(<span class="st">"~/example-repo/RAW"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">read.csv</span>(<span class="st">"important-data.csv"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co"># Call on another R source file back at the root of the directory </span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="fu">setwd</span>(<span class="st">"."</span>)</span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="fu">source</span>(<span class="st">"analysis.R"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="co"># Save the results of the analysis in it's own folder</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="fu">setwd</span>(<span class="st">"/Cleaned_data"</span>)</span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="fu">write.csv</span>(data_output, <span class="st">"data_output.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="coding-practices-avoid-hard-coded-values" class="slide level2">
+<h2>Coding Practices: Avoid hard coded values</h2>
+<ul>
+<li class="fragment">Ever seen code where the logic is impossible to follow due to manual manipulations?</li>
+<li class="fragment">If using constants, make sure they’re carefully commented.</li>
+<li class="fragment">Otherwise, try to utilize variables whenever possible to improve reproducibility</li>
+</ul>
+</section>
+<section id="coding-practices-avoid-hard-coded-values-1" class="slide level2">
+<h2>Coding Practices: Avoid hard coded values</h2>
+<div class="sourceCode" id="cb7" data-code-line-numbers="1-3|5-8|10-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Bad</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>spec_data <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">mutate</span>(<span class="at">scatter_normalized =</span> scatter <span class="sc">/</span> <span class="fl">2.8</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  </span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co"># Better </span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>spec_data <span class="sc">|&gt;</span> </span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="co"># Normalize by dividing by constant from calibration</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">mutate</span>(<span class="at">scatter_normalized =</span> scatter <span class="sc">/</span> <span class="fl">2.8</span>)</span>
+<span id="cb7-9"><a href="#cb7-9"></a>  </span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="co"># Best</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="co"># Load analysis that generates constant</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="fu">source</span>(<span class="st">"spec_calibration.R"</span>)</span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a>spec_data <span class="sc">|&gt;</span> </span>
+<span id="cb7-15"><a href="#cb7-15"></a>  <span class="co"># Normalize by dividing by constant from calibration</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>  <span class="fu">mutate</span>(<span class="at">scatter_normalized =</span> scatter <span class="sc">/</span> calibration_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<ul>
+<li>How is someone else supposed to know what 2.8 is? Do they keep it as is when they run the script?</li>
+<li>Or maybe it’s just the number of iced coffees the author had today. Impossible to know.</li>
+<li>Calling another script is kind of like citing your sources.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conclusions" class="slide level2">
+<h2>Conclusions</h2>
+<ul>
+<li class="fragment">There are many opportunities to modify your research workflows to both:</li>
+</ul>
+<ol type="1">
+<li class="fragment">Save your future self some headache</li>
+<li class="fragment">Make your science more useful to others</li>
+</ol>
+<ul>
+<li class="fragment">A list of resources can be found at the end of the presentation</li>
+</ul>
+</section></section>
+<section>
+<section id="happy-data-wrangling" class="title-slide slide level1 center">
+<h1>Happy Data Wrangling!</h1>
+
 </section>
 <section id="references" class="slide level2">
 <h2>References</h2>
@@ -764,6 +1153,19 @@
 <li class="fragment">Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10</li>
 <li class="fragment">Wilkinson, M., Dumontier, M., Aalbersberg, I. et al.&nbsp;The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18</li>
 <li class="fragment"><a href="https://www.unesco.org/en/open-science/about?hub=686">UNESCO Recommendation on Open Science</a>. 2023</li>
+</ul>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<ul>
+<li class="fragment"><a href="https://swcarpentry.github.io/git-novice/">Software Carpentry: Version Control with Git</a></li>
+<li class="fragment"><a href="https://www.makeareadme.com/">Making README’s</a></li>
+<li class="fragment"><a href="https://style.tidyverse.org/">Tidyverse Style Guide</a></li>
+<li class="fragment"><a href="https://conflicted.r-lib.org/">Conflicted</a></li>
+<li class="fragment"><a href="https://hbs-rcs.github.io/large_data_in_R/">Large Data in R: Tools and Techniques</a></li>
+<li class="fragment"><a href="https://blog.djnavarro.net/posts/2022-03-04_data-types-in-arrow-and-r/">Data Types in Arrow and R</a></li>
+<li class="fragment"><a href="https://www.upsolver.com/blog/apache-parquet-why-use">What is the Parquet File Format? Use Cases &amp; Benefits</a></li>
+<li class="fragment"><a href="https://ytakemon.github.io/2019-10-22-R-BCCRC/02-filedir/">R for Reproducible Research:Navigating Files and Directories</a></li>
 </ul>
 
 <div class="footer footer-default">
