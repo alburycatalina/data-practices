@@ -29,22 +29,17 @@ That's what we'll talk about today - open science and the FAIR principles, which
 
 ## About Me
 
-:::: {layout="[ 60, 40 ]"}
-
+::: {layout="[ 60, 40 ]"}
 ::: {#first-column}
 -   [**Albury C**](alburycatalina.github.io)
 -   MSc, Marine microbial trace nutrient dynamics, Dalhousie University
-- Currently a data scientist for Infrastruture Canada
+-   Currently a data scientist for Infrastruture Canada
 :::
 
 ::: {#second-column}
 ![](images/albury.jpeg)
 :::
-
-::::
-
-
-
+:::
 
 ::: notes
 -   Thanks for joining me for this presentation.
@@ -71,10 +66,10 @@ That's what we'll talk about today - open science and the FAIR principles, which
 # *“If I have seen further, it is by standing on the shoulders of giants.”* - Sir Isaac Newton
 
 ::: notes
-- Begin with a quote: Sir Isaac Newton said this
-- Speaking to how his scientific advancements were only possible due to the result of previous work by others.
+-   Begin with a quote: Sir Isaac Newton said this
+-   Speaking to how his scientific advancements were only possible due to the result of previous work by others.
 -   Likewise, how can we make sure our contributions can be utilized by others to keep advancing our areas of study?
-- One way is by prioritizing what some call open approaches to science
+-   One way is by prioritizing what some call open approaches to science
 :::
 
 ## Open Science
@@ -83,12 +78,10 @@ That's what we'll talk about today - open science and the FAIR principles, which
 -   Increases transparency and the speed of knowledge transfer
 
 ::: notes
-- A set of principles and practices that aim to make scientific research from all fields accessible to everyone for the benefits of scientists and society as a whole
-- Increases collaboration and opens processes of scientific knowledge creation.
-- Examples of closed science: paywalled journals, supporting data being unavailable or high cost, favoring knowledge produced by high income countries, and hidden or unknown source code or workflow, which is where I'd like to direct attention for talk 
+-   A set of principles and practices that aim to make scientific research from all fields accessible to everyone for the benefits of scientists and society as a whole
+-   Increases collaboration and opens processes of scientific knowledge creation.
+-   Examples of closed science: paywalled journals, supporting data being unavailable or high cost, favoring knowledge produced by high income countries, and hidden or unknown source code or workflow, which is where I'd like to direct attention for talk
 :::
-
-
 
 # FAIR Principles
 
@@ -98,24 +91,25 @@ That's what we'll talk about today - open science and the FAIR principles, which
 -   Reusable
 
 ::: notes
-- One framework for increasing openess in workflows is the FAIR principles
-- The FAIR principles were released in 2016 in Scientific Data. Guidance for improving the infrastructure that supports the reuse of scientific data. 
-- Findable: making sure your data makes it into a repository where others can also discover it
-- Accessible: people can use it (documentation, what does each column mean. open source)
-- Interoperable: Data should be readable by machines
-- Reusable: Ensure there are many labels attached to the data. Define if raw or processed, specificy perculiarities
-- We will talk about best pratices for setting up your research workflow in a way that improves these aspects for your data.
+-   One framework for increasing openess in workflows is the FAIR principles
+-   The FAIR principles were released in 2016 in Scientific Data. Guidance for improving the infrastructure that supports the reuse of scientific data.
+-   Findable: making sure your data makes it into a repository where others can also discover it
+-   Accessible: people can use it (documentation, what does each column mean. open source)
+-   Interoperable: Data should be readable by machines
+-   Reusable: Ensure there are many labels attached to the data. Define if raw or processed, specificy perculiarities
+-   We will talk about best pratices for setting up your research workflow in a way that improves these aspects for your data.
 :::
 
 ## FAIR Principles
-- *"Importantly, it is our intent that the principles apply not only to ‘data’ in the conventional sense, but also to the **algorithms, tools, and workflows** that led to that data." (Wilkinson et al. 2016)*
-- Focus on machine actionability 
+
+-   *"Importantly, it is our intent that the principles apply not only to ‘data’ in the conventional sense, but also to the **algorithms, tools, and workflows** that led to that data." (Wilkinson et al. 2016)*
+-   Focus on machine actionability
 
 ![](images/FAIR_article.png)
 
 ::: notes
-- Applies to not just the data itself but also scripts, tools, and workflows
-- Focus on machine-actionability. Humans need help from machines because of growing scale and complexity of data
+-   Applies to not just the data itself but also scripts, tools, and workflows
+-   Focus on machine-actionability. Humans need help from machines because of growing scale and complexity of data
 :::
 
 # Best Data Practices
@@ -125,11 +119,11 @@ That's what we'll talk about today - open science and the FAIR principles, which
 -   Coding Practices
 
 ::: notes
-- We'll be talking about these in the context of using an open source language like R or Python for working with your data. 
-- Open source is one step in making sure data analysis pipeline is FAIR. 
-- Non-proprietary and free!
-
+-   We'll be talking about these in the context of using an open source language like R or Python for working with your data.
+-   Open source is one step in making sure data analysis pipeline is FAIR.
+-   Non-proprietary and free!
 :::
+
 # Documentation
 
 -   Use version control
@@ -137,29 +131,30 @@ That's what we'll talk about today - open science and the FAIR principles, which
 -   Anticipate package conflicts
 
 ::: notes
-- We'll start with documentation because it's often one of the first aspects you should to consider when starting a project. 
-- We'll talk about using version control for keeping track of your project, which includes creating a README document to act as title page, and talk about how to make sure the packages you use in your analysis continue to be able to work. 
+-   We'll start with documentation because it's often one of the first aspects you should to consider when starting a project.
+-   We'll talk about using version control for keeping track of your project, which includes creating a README document to act as title page, and talk about how to make sure the packages you use in your analysis continue to be able to work.
 :::
 
 ## Documentation: Use version control
 
 -   Git is a popular SCM (source code manager). It can be used through your terminal, browser ([ex: Github](https://github.com/)), or desktop software (ex: [GitKraken](https://www.gitkraken.com/) or your chosen IDE).
 -   Version control helps you to avoid circumstances that birth monstrosities like `analysis_draft_3_final.R`.
-- [An example of a Github repository](https://github.com/alburycatalina/example-repo)
+-   [An example of a Github repository](https://github.com/alburycatalina/example-repo)
 
 ::: notes
-- Git is a SCM (stands for source code manager)
-- Version control allows for multiple people to contribute to code and also helps you keep track of your project. 
-- Ever seen a file name like this? Piling on information into file name. Git takes care of this.
+-   Git is a SCM (stands for source code manager)
+-   Version control allows for multiple people to contribute to code and also helps you keep track of your project.
+-   Ever seen a file name like this? Piling on information into file name. Git takes care of this.
 :::
+
 ## Documentation: Use version control
 
 ![Illustration by Allison Horst](images/git.png)
 
-:::notes
-- Git asks you to create "save points" every time you make a change. Allows you to easily return to previous versions and know what has changed over time. 
-- If you're using excel for analysis, you may notice that it's difficult to keep track of exactly what has happened. 
-- With an OS language like R/Python plus git, you're unstoppable!
+::: notes
+-   Git asks you to create "save points" every time you make a change. Allows you to easily return to previous versions and know what has changed over time.
+-   If you're using excel for analysis, you may notice that it's difficult to keep track of exactly what has happened.
+-   With an OS language like R/Python plus git, you're unstoppable!
 :::
 
 ## Documentation: Master the art of the README
@@ -168,8 +163,8 @@ That's what we'll talk about today - open science and the FAIR principles, which
 -   Use the README to document anything that might be important if someone brand new was to try to pick up where you've left off.
 
 ::: notes
-- README is landing page. Use it to act as the instruction manual for the code
-- Comes in very handy when writing methods section of papers
+-   README is landing page. Use it to act as the instruction manual for the code
+-   Comes in very handy when writing methods section of papers
 :::
 
 ## Documentation: Anticipate package conflicts
@@ -178,10 +173,10 @@ That's what we'll talk about today - open science and the FAIR principles, which
 -   For advanced models, some use [conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) to manage environments and package versions.
 
 ::: notes
-- Most of us use packages to add functionality to OS languages
-- Can get complicated when versions change over time
-- Bare minimum is to note the version of critical packages
-- Conda to manage environments
+-   Most of us use packages to add functionality to OS languages
+-   Can get complicated when versions change over time
+-   Bare minimum is to note the version of critical packages
+-   Conda to manage environments
 :::
 
 ## Documentation: Anticipate package conflicts
@@ -195,11 +190,12 @@ Use the [`conflicted`](https://conflicted.r-lib.org/) package to choose which to
 :::
 
 ::: notes
-- There may also be conflicts between packages depending on who uses the repo
-- This aside is half about documentation and half coding practice. Documentation because here you're telling the use which function from which package you mention to use
-- There are many packages with functions named the same thing
-- Avoid ambiguity by specifying 
+-   There may also be conflicts between packages depending on who uses the repo
+-   This aside is half about documentation and half coding practice. Documentation because here you're telling the use which function from which package you mention to use
+-   There are many packages with functions named the same thing
+-   Avoid ambiguity by specifying
 :::
+
 ``` r
 # Load conflicted package
 library(conflicted)
@@ -208,41 +204,42 @@ library(conflicted)
 conflicts_prefer(dplyr::filter())
 ```
 
-
 # Storing Your Data
 
 -   Use tidy data format
-- Redundancy in data is good
+-   Redundancy in data is good
 -   Keep raw data raw
 -   Manage your memory
 
 ::: notes
-Next, some thought to how you keep your data is important. 
+Next, some thought to how you keep your data is important.
 :::
+
 ## Storing Your Data: Use tidy data format
 
 ![Illustration from *Tidy Data for reproducibility, efficiency, and collaboration* by Julia Lowndes and Allison Horst](images/tidy_data_horst.jpg)
 
 ::: notes
-- In 2014, Hadley Wickam proposed tidy data in a paper in Journal Statistical Software, where every obs is a row and every variable is a column. 
-- Great for standardization and machine readability
+-   In 2014, Hadley Wickam proposed tidy data in a paper in Journal Statistical Software, where every obs is a row and every variable is a column.
+-   Great for standardization and machine readability
 :::
 
 ## Storing Your Data: Redundancy in data is good
 
 -   Utilize metadata and data dictionaries to link provide important context to your primary data set.
 -   Before beginning a project, think about the different ways that data should be stored.
--   Ex: In a field study, observations from each study site should be kept separate from information about each study site. The two can be linked by unique site identifiers. 
+-   Ex: In a field study, observations from each study site should be kept separate from information about each study site. The two can be linked by unique site identifiers.
 
 ::: notes
-- Through our scientific career, we're often told to be concise and simplify so this advice may surprise you. 
-- Redundancy in data is good because it allows you to link between different pieces of information and also saves space. 
-- Also plays into tidy data. 
+-   Through our scientific career, we're often told to be concise and simplify so this advice may surprise you.
+-   Redundancy in data is good because it allows you to link between different pieces of information and also saves space.
+-   Also plays into tidy data.
 :::
 
-## Storing Your Data:  Redundancy in data is good
-- This table contains two types of observations: song information and Billboard ranking (Wickam 2014)
-- One entry each week the song remains on the Billboard top 100
+## Storing Your Data: Redundancy in data is good
+
+-   This table contains two types of observations: song information and Billboard ranking (Wickam 2014)
+-   One entry each week the song remains on the Billboard top 100
 
 ![](images/Redundancy_multipledata_types.png)
 
@@ -250,27 +247,27 @@ Next, some thought to how you keep your data is important.
 
 Instead, they should be saved as:
 
-1. a table with song's artists, names and run times
-2. a table with details on their Billboard ranking (Wickam 2014).
+1.  a table with song's artists, names and run times
+2.  a table with details on their Billboard ranking (Wickam 2014).
 
 ![](images/Redundancy_twotables.png)
 
 ::: notes
-
 Joined by unique identifiers
 :::
 
 ## Storing Your Data: Redundancy in data is good
 
-- Reduces each table to only one type of observation, avoiding confusion
-- Saves space
+-   Reduces each table to only one type of observation, avoiding confusion
+-   Saves space
 
-::: notes 
-- Avoids confusion. In the first table there are two kinds of temporal data. It could be easy to conflate time and date. 
+::: notes
+-   Avoids confusion. In the first table there are two kinds of temporal data. It could be easy to conflate time and date.
 
-- The date is actually the date that the song first entered the billboard top 100. The time is the song length. 
-- Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (one with 100 entries and 4 variables and the other with 7 x 3 = 21) = 421. 
-::: 
+-   The date is actually the date that the song first entered the billboard top 100. The time is the song length.
+
+-   Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (one with 100 entries and 4 variables and the other with 7 x 100 x 3 = 2100) = 4500.
+:::
 
 ![](images/Redundancy_twotables.png)
 
@@ -281,7 +278,6 @@ Joined by unique identifiers
 -   Keep all analysis to your scripts, which will read the data and create outputs from it.
 
 ::: notes
-
 -   Use a descriptive file name for any outputs generated from raw data.
 :::
 
@@ -293,15 +289,13 @@ Joined by unique identifiers
 
 ## Storing Your Data: Manage your memory
 
-```r
+``` r
 # Load in large dataset with arrow
 library(arrow)
 
 massive_dataset <- read.csv("massive_dataset.csv") |> 
   as_arrow_table()
-
 ```
-
 
 # Coding Practices
 
@@ -310,11 +304,9 @@ massive_dataset <- read.csv("massive_dataset.csv") |>
 -   Avoid hard coded values
 
 ::: notes
-- After properly establishing documentation, creating a repo for your project, and deciding where and how your data will be stored, you're ready to start coding. 
-- Some things that will help with the FAIRness of your analysis will be to:
-
+-   After properly establishing documentation, creating a repo for your project, and deciding where and how your data will be stored, you're ready to start coding.
+-   Some things that will help with the FAIRness of your analysis will be to:
 :::
-
 
 ## Coding Practices: Follow a style guide
 
@@ -329,12 +321,11 @@ average <- mean(feet / 12 + inches, na.rm = TRUE)
 ```
 
 ::: notes
-- Making sure your code is legible to others is one of the best ways to make sure it is reusable
-- A lot like grammar and style make a language like english easier to read, following style guide helps similarly for code
-- Standardized style means others know what to expect
-- Relevant for nearly all languages
+-   Making sure your code is legible to others is one of the best ways to make sure it is reusable
+-   A lot like grammar and style make a language like english easier to read, following style guide helps similarly for code
+-   Standardized style means others know what to expect
+-   Relevant for nearly all languages
 :::
-
 
 ## Coding Practices: Follow a style guide
 
@@ -346,7 +337,6 @@ Use `cmd + shift + A` in R-studio to auto-format your code on the fly.
 
 ::: notes
 Handy tip: can highlight and cmd shift A to auto format
-
 :::
 
 ## Coding Practices: More on Style
@@ -359,11 +349,10 @@ Sectioning your code makes it easy for you and others to find the part of the an
 Use `cmd + shift + R` in Rstudio to create a new collapsible section.
 :::
 
-``` {.r}
+``` r
 # separate chunks of code with sections
 
 # new section -------------------------------------------------------------
-
 
 ```
 
@@ -377,6 +366,7 @@ Use `cmd + shift + R` in Rstudio to create a new collapsible section.
 :::
 
 ## Coding Practices: Use relative file paths
+
 Relative paths specify locations starting from the current location.
 
 ``` {.r code-line-numbers="1-2|4-5"}
@@ -386,9 +376,10 @@ list.files("/Users/calbury/Desktop")
 # Better
 list.files("Desktop")
 ```
+
 ## Coding Practices: Use relative file paths
 
-- Change directories throughout the script to access different folders in the repository.
+-   Change directories throughout the script to access different folders in the repository.
 
 ``` {.r code-line-numbers="1-3|5-7|9-11"}
 # Relative file path to a dedicated folder with raw data files
@@ -403,7 +394,6 @@ source("analysis.R")
 setwd("/Cleaned_data")
 write.csv(data_output, "data_output.csv")
 ```
-
 
 ## Coding Practices: Avoid hard coded values
 
@@ -431,24 +421,23 @@ spec_data |>
   # Normalize by dividing by constant from calibration
   mutate(scatter_normalized = scatter / calibration_value)
 ```
+
 ::: notes
-- How is someone else supposed to know what 2.8 is? Do they keep it as is when they run the script? 
-- Or maybe it's just the number of iced coffees the author had today. Impossible to know. 
-- Calling another script is kind of like citing your sources.
+-   How is someone else supposed to know what 2.8 is? Do they keep it as is when they run the script?
+-   Or maybe it's just the number of iced coffees the author had today. Impossible to know.
+-   Calling another script is kind of like citing your sources.
 :::
 
 ## Conclusions
 
-- There are many opportunities to modify your research workflows to both:
+-   There are many opportunities to modify your research workflows to both:
 
-1. Save your future self some headache
-2. Make your science more useful to others
+1.  Save your future self some headache
+2.  Make your science more useful to others
 
-- A list of resources can be found at the end of the presentation 
-
+-   A list of resources can be found at the end of the presentation
 
 # Happy Data Wrangling!
-
 
 ## References
 
@@ -457,11 +446,12 @@ spec_data |>
 -   [UNESCO Recommendation on Open Science](https://www.unesco.org/en/open-science/about?hub=686). 2023
 
 ## Resources
-- [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/)
-- [Making README's](https://www.makeareadme.com/)
-- [Tidyverse Style Guide](https://style.tidyverse.org/)
-- [Conflicted](https://conflicted.r-lib.org/)
-- [Large Data in R: Tools and Techniques](https://hbs-rcs.github.io/large_data_in_R/)
-- [Data Types in Arrow and R](https://blog.djnavarro.net/posts/2022-03-04_data-types-in-arrow-and-r/)
-- [What is the Parquet File Format? Use Cases & Benefits](https://www.upsolver.com/blog/apache-parquet-why-use)
-- [R for Reproducible Research:Navigating Files and Directories](https://ytakemon.github.io/2019-10-22-R-BCCRC/02-filedir/)
+
+-   [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/)
+-   [Making README's](https://www.makeareadme.com/)
+-   [Tidyverse Style Guide](https://style.tidyverse.org/)
+-   [Conflicted](https://conflicted.r-lib.org/)
+-   [Large Data in R: Tools and Techniques](https://hbs-rcs.github.io/large_data_in_R/)
+-   [Data Types in Arrow and R](https://blog.djnavarro.net/posts/2022-03-04_data-types-in-arrow-and-r/)
+-   [What is the Parquet File Format? Use Cases & Benefits](https://www.upsolver.com/blog/apache-parquet-why-use)
+-   [R for Reproducible Research:Navigating Files and Directories](https://ytakemon.github.io/2019-10-22-R-BCCRC/02-filedir/)
